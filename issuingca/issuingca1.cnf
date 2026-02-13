@@ -1,0 +1,91 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir               = /home/ubuntu/ca/issuingca
+certs             = $dir/cert
+crl_dir           = $dir/crl
+new_certs_dir     = $dir/issued_certs
+database          = $dir/data/index.dat
+serial            = $dir/data/serial.dat
+private_key       = $dir/private/issuingca.key
+certificate       = $dir/cert/issuingca.cer
+crlnumber         = $dir/data/crl_number
+crl               = $dir/crl/issuingca.crl
+crl_extensions    = crl_ext
+default_crl_days  = 30
+default_md        = sha256
+name_opt          = ca_default
+cert_opt          = ca_default
+default_days      = 1826
+preserve          = no
+policy            = policy_any
+
+[ policy_any ]
+countryName             = optional
+stateOrProvinceName     = optional
+localityName            = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
+
+[ req ]
+default_bits        = 2048
+distinguished_name  = req_distinguished_name
+string_mask         = utf8only
+default_md          = sha256
+x509_extensions     = v3_ca
+
+[ req_distinguished_name ]
+countryName                     = IN
+stateOrProvinceName             = West Bengal
+localityName                    = Kolkata
+0.organizationName              = prm
+organizationalUnitName          = DevOps
+commonName                      = 
+emailAddress                    = subhrajit@prmfincon.com
+
+countryName_default             = IN
+stateOrProvinceName_default     = WestBengal
+localityName_default            = Kolkata
+0.organizationName_default      = prm
+organizationalUnitName_default  = DevOps
+emailAddress_default            = subhrajit@prmfincon.com
+
+[ user_cert ]
+basicConstraints = CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage = clientAuth, emailProtection
+crlDistributionPoints = URI:http://ca/issuingca.crl
+authorityInfoAccess = caIssuers;URI:http://ca/issuingca.cer
+
+[ server_cert ]
+basicConstraints = CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer:always
+keyUsage = critical, digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth
+crlDistributionPoints = URI:http://ca/issuingca.crl
+authorityInfoAccess = caIssuers;URI:http://ca/issuingca.cer
+
+[ codeSigning_cert ]
+basicConstraints = CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer:always
+keyUsage = critical, digitalSignature, keyEncipherment
+extendedKeyUsage = codeSigning
+crlDistributionPoints = URI:http://ca/issuingca.crl
+authorityInfoAccess = caIssuers;URI:http://ca/issuingca.cer
+
+[ crl_ext ]
+authorityKeyIdentifier=keyid:always
+
+[ ocsp ]
+basicConstraints = CA:FALSE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+keyUsage = critical, digitalSignature
+extendedKeyUsage = critical, OCSPSigning
