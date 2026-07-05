@@ -1,1 +1,6 @@
 V	280518054001Z		1000	unknown	/C=IN/ST=West Bengal/L=Kolkata/O=prm/OU=DevOps/CN=140.245.22.16
+V	281007175807Z		1001	unknown	/C=IN/ST=West Bengal/L=Kolkata/O=airlegit/OU=DevOps/CN=kafka-master-1.airlegit.com
+V	281007175829Z		1002	unknown	/C=IN/ST=West Bengal/L=Kolkata/O=airlegit/OU=DevOps/CN=kafka-master-2.airlegit.com
+V	281007175849Z		1003	unknown	/C=IN/ST=West Bengal/L=Kolkata/O=airlegit/OU=DevOps/CN=kafka-master-3.airlegit.com
+V	281007175919Z		1004	unknown	/C=IN/ST=West Bengal/L=Kolkata/O=airlegit/OU=DevOps/CN=kafka-broker-1.airlegit.com
+V	281007175940Z		1005	unknown	/C=IN/ST=West Bengal/L=Kolkata/O=airlegit/OU=DevOps/CN=kafka-broker-2.airlegit.com
