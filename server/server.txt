@@ -1,0 +1,99 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = IN, ST = West Bengal, L = Kolkata, O = prm, OU = DevOps, CN = 140.245.22.16
+        Validity
+            Not Before: Feb 13 05:40:01 2026 GMT
+            Not After : May 18 05:40:01 2028 GMT
+        Subject: C = IN, ST = West Bengal, L = Kolkata, O = prm, OU = DevOps, CN = 140.245.22.16
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (4096 bit)
+                Modulus:
+                    00:eb:1c:01:58:3d:de:f6:d9:bd:e7:83:c5:d2:69:
+                    53:64:a8:2c:bc:66:b0:08:0e:91:a8:07:42:b9:25:
+                    06:d0:2b:33:0a:75:87:6b:97:c4:48:4d:44:51:bb:
+                    7e:b9:11:ec:99:bd:15:1e:7e:07:22:69:b4:ab:1d:
+                    c1:0b:19:f0:73:34:d6:28:a3:50:79:59:0b:09:c8:
+                    6d:97:f0:09:02:60:1e:32:6b:4a:df:2f:f5:95:74:
+                    43:f0:28:f5:c3:6b:cc:62:93:99:ef:9e:c9:65:30:
+                    71:ae:df:56:ad:4f:a0:ae:d3:6b:bb:02:63:46:83:
+                    a2:63:cc:bf:c4:de:f3:da:23:8b:6d:ee:98:d9:a4:
+                    fb:15:20:a1:59:df:ac:11:88:44:13:78:90:d7:4a:
+                    68:5d:e8:4e:a7:2c:84:cc:fe:48:3b:10:3d:48:ba:
+                    33:62:ab:d7:b0:b3:19:28:93:95:94:97:fa:b9:eb:
+                    4e:57:35:d0:a8:cd:a2:d0:94:70:f4:42:ec:1d:30:
+                    a5:d9:b3:81:5e:0b:da:f3:c7:9d:98:44:61:58:89:
+                    21:74:67:0f:e5:03:bc:eb:8f:5e:af:e0:73:a0:08:
+                    4f:6c:9e:51:97:4a:24:f9:ee:75:e2:18:ad:48:ed:
+                    75:df:6e:05:eb:cd:5f:8f:b8:3b:0f:34:1d:98:9a:
+                    8d:b2:87:fa:79:b7:d7:52:50:ef:b7:33:a3:47:38:
+                    62:16:5c:b4:8f:01:4d:dc:78:2e:87:2f:59:3c:21:
+                    ad:5c:df:86:04:45:b1:0c:c6:64:0b:a8:7e:fe:47:
+                    b7:90:a6:bb:87:37:45:f5:9c:c7:84:2c:6a:90:f1:
+                    b3:d1:37:e4:f5:58:5b:43:9b:a8:91:9e:60:08:5d:
+                    26:2b:6e:78:1e:57:27:3a:69:ab:c7:ec:4e:fc:6d:
+                    36:91:6e:85:22:45:3e:be:d9:2e:02:1b:11:6b:9d:
+                    1c:0d:72:5d:c5:48:ab:4a:c4:bc:c8:b9:8d:62:da:
+                    57:fe:8f:ef:ef:ef:07:22:9c:73:c1:2d:cd:97:3f:
+                    34:35:00:3c:20:22:75:f0:1b:85:16:25:8a:b9:36:
+                    b3:2d:ba:ec:ba:0e:25:cc:7a:d4:a5:bb:9e:37:12:
+                    c8:bf:a7:ef:e8:db:8d:6b:df:e6:f5:77:a3:1d:50:
+                    05:f2:e5:4f:c4:ff:a2:fc:f0:f1:19:58:19:5b:af:
+                    c5:8c:87:ef:0e:27:d2:62:c3:04:ab:65:3e:81:c1:
+                    b4:57:d8:5f:55:93:8b:0e:0c:ea:6c:ea:a8:64:05:
+                    25:64:ec:a3:b9:fa:bd:a2:64:6c:a2:d2:cc:5e:ba:
+                    74:2e:73:98:c9:39:44:27:83:5a:0f:54:99:61:bc:
+                    ac:2d:fb
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                DA:BC:A6:57:3A:84:48:0A:FA:4A:3A:45:8A:D4:7B:69:B4:2F:57:6C
+            X509v3 Authority Key Identifier: 
+                16:67:E8:60:6E:C3:89:4A:C1:CC:5F:70:FA:87:2F:10:2F:2D:40:D3
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://ca.local/issuingca.crl
+            Authority Information Access: 
+                CA Issuers - URI:http://ca.local/issuingca.cer
+            X509v3 Subject Alternative Name: 
+                IP Address:140.245.22.16
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        0a:cc:49:eb:29:5b:37:47:22:b4:ce:20:82:e4:2d:5d:ab:03:
+        d6:03:f0:3d:da:5a:e1:77:19:a0:d1:09:7f:12:9a:ed:e8:70:
+        16:cb:e2:63:90:63:27:5b:78:15:c6:d8:8b:4c:8e:09:58:a5:
+        c7:e1:d1:be:c4:89:6a:0b:af:a3:da:0b:ed:79:0d:c6:00:f4:
+        29:26:f9:b1:c6:0e:f9:7d:13:1b:e7:79:d7:40:d7:b2:c2:b2:
+        5e:a0:9b:61:b6:72:ab:3c:bc:ce:06:fc:5f:35:83:0d:07:f1:
+        6b:f8:04:eb:90:47:9c:53:0e:98:40:a2:dd:aa:bc:a1:3a:cb:
+        f6:a4:23:3d:88:de:35:bd:87:3a:1b:4f:b3:1a:a0:61:28:ff:
+        7b:65:68:d1:c9:fc:85:cf:4b:a9:18:92:67:e4:a7:5f:20:eb:
+        b4:d3:da:e7:c6:e9:64:ff:04:39:66:e1:af:2c:10:1a:bf:ab:
+        1e:59:88:9f:9a:42:6b:14:2f:fa:73:c7:5e:97:80:94:58:cc:
+        e2:8d:d1:c2:86:f3:0d:95:7f:fe:a2:08:7a:78:39:aa:6b:e3:
+        73:82:1d:7f:e8:84:a3:59:93:49:95:21:7d:a1:52:da:e2:e3:
+        63:d8:87:c8:54:4a:9d:48:f8:8b:89:7f:b2:76:ba:56:19:a4:
+        ee:f3:f0:5a:c0:e1:e3:dd:67:ca:21:4a:96:72:e7:b5:2e:c9:
+        b8:32:64:d0:e6:6c:45:d7:80:e4:6f:6a:cd:d3:22:d4:3d:07:
+        42:4f:4b:74:6b:2c:22:aa:41:bc:d5:bb:eb:0e:0a:a1:42:de:
+        38:9a:8b:9e:23:41:b9:c1:2c:b5:13:80:53:56:01:d7:a7:81:
+        eb:6e:43:4c:67:e9:f7:d5:10:7a:c5:81:84:cc:60:22:2e:34:
+        80:73:bd:3b:51:82:05:9b:62:53:b1:55:5e:65:a2:91:96:a8:
+        d9:2f:35:04:58:1e:dd:c6:ab:c9:2e:25:f9:74:0d:8c:6d:d7:
+        55:b4:fc:b3:74:fc:98:41:8e:64:91:c3:ee:a9:e9:ad:37:68:
+        3f:82:4d:9b:c7:d3:da:2b:e0:e6:43:75:07:24:b0:47:b1:43:
+        00:4e:0c:8c:ba:f5:f0:61:0f:7d:dc:77:a6:e9:b7:4a:b8:41:
+        bf:8c:ed:f0:67:39:17:c4:e5:a3:dd:5d:d0:c1:37:01:60:52:
+        60:d8:3d:56:d8:db:ee:27:7e:f4:21:59:2a:43:63:ce:48:fa:
+        8c:90:80:fe:d2:f2:f9:2f:b3:fb:05:20:9a:6a:82:9f:d5:8f:
+        0c:3b:fb:fe:1e:4c:cf:2a:45:00:75:3b:37:14:c4:e5:78:ed:
+        71:ad:e2:26:1c:35:8a:36

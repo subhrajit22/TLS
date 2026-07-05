@@ -1,0 +1,49 @@
+Node 1 — kafka-master-1
+---------------------------
+[ dn ]
+CN = kafka-master-1.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-1.airlegit.com
+DNS.2 = KAFKA-Master
+IP.1  = 140.238.163.59
+
+Node 2 — kafka-master-2
+------------------------------
+[ dn ]
+CN = kafka-master-2.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-2.airlegit.com
+DNS.2 = prometheus
+IP.1  = 140.245.19.154
+
+Node 3 — kafka-master-3
+--------------------------
+[ dn ]
+CN = kafka-master-3.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-3.airlegit.com
+DNS.2 = uat2.airlegit.com
+IP.1  = 161.118.177.132
+
+Node 4 — kafka-broker-1
+--------------------------------
+[ dn ]
+CN = kafka-broker-1.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-broker-1.airlegit.com
+DNS.2 = uat2.jenkins
+IP.1  = 144.24.113.131
+
+Node 5 — kafka-broker-2
+-------------------------------------
+[ dn ]
+CN = kafka-broker-2.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-broker-2.airlegit.com
+DNS.2 = grafana
+IP.1  = 161.118.189.55
