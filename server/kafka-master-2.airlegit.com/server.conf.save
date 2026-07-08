@@ -1,0 +1,31 @@
+[ req ]
+default_bits       = 4096
+prompt             = no
+default_md         = sha256
+distinguished_name = dn
+req_extensions     = req_ext
+
+[ dn ]
+C  = IN
+ST = West Bengal
+L  = Kolkata
+O  = airlegit
+OU = DevOps
+CN = kafka-master-2.airlegit.com        # Server IP or hostname
+
+[ req_ext ]
+subjectAltName = @alt_names
+
+[ dn ]
+CN = kafka-master-2.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-2.airlegit.com
+DNS.2 = prometheus
+IP.1  = 140.245.19.154
+[ alt_names ]
+DNS.1 = kafka-master-2.airlegit.com
+DNS.2 = prometheus
+IP.1  = 140.245.19.154  
+# Server IP
+#DNS.1 = mongodb.example.com   # Optional: DNS name if used
