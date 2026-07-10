@@ -1,0 +1,161 @@
+CREATE USER root WITH PASSWORD 'password123';
+
+CREATE DATABASE mydb OWNER  root;
+
+GRANT ALL PRIVILEGES ON DATABASE mydb TO root;
+
+CREATE DATABASE mydb OWNER myuser;
+
+GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+
+
+Node 1 — kafka-master-1
+---------------------------
+[ dn ]
+CN = kafka-master-1.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-1.airlegit.com
+DNS.2 = KAFKA-Master
+IP.1  = 140.238.163.59
+
+Node 4 — kafka-master-2
+--------------------------------
+[ dn ]
+CN = kafka-master-2.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-2.airlegit.com
+DNS.2 = uat2.jenkins
+IP.1  = 144.24.113.131
+
+Node 2 — kafka-master-2
+------------------------------
+[ dn ]
+CN = kafka-master-2.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-2.airlegit.com
+DNS.2 = uat2.jenkins
+IP.1  = 144.24.113.131
+
+Node 3 — kafka-master-3
+--------------------------
+[ dn ]
+CN = kafka-master-3.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-master-3.airlegit.com
+DNS.2 = uat2.airlegit.com
+IP.1  = 161.118.177.132
+
+Node 4 — kafka-broker-1
+--------------------------------
+[ dn ]
+CN = kafka-broker-1.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-broker-1.airlegit.com
+DNS.2 = prometheus
+IP.1  = 140.245.19.154
+
+Node 5 — kafka-broker-2
+-------------------------------------
+[ dn ]
+CN = kafka-broker-2.airlegit.com
+
+[ alt_names ]
+DNS.1 = kafka-broker-2.airlegit.com
+DNS.2 = grafana
+IP.1  = 161.118.189.55
+=============================================================================================================================
+openssl pkcs12 -export -inkey server/kafka-master-1.airlegit.com/server.key -in server/kafka-master-1.airlegit.com/server.cer 
+-certfile issuingca/cert/issuingca.cer -out server/kafka-master-1.airlegit.com/kafka-master-1.p12 -name kafka-master-1
+--------------------------------------------------------
+openssl pkcs12 -export \
+-inkey server/kafka-master-1.airlegit.com/server.key \
+-in server/kafka-master-1.airlegit.com/server.cer \
+-certfile issuingca/cert/issuingca.cer \
+-out kafka-master-1.p12 \
+-name kafka-master-1
+
+keytool -importkeystore \
+-srckeystore server/kafka-master-1.airlegit.com/kafka-master-1.p12 \
+-srcstoretype PKCS12 \
+-destkeystore server/kafka-master-1.airlegit.com/kafka-master-1.jks \
+-deststoretype JKS
+-----------------------
+openssl pkcs12 -export \
+-inkey server/kafka-master-2.airlegit.com/server.key \
+-in server/kafka-master-2.airlegit.com/server.cer \
+-certfile issuingca/cert/issuingca.cer \
+-out server/kafka-master-2.airlegit.com/kafka-master-2.p12 \
+-name kafka-master-2
+
+keytool -importkeystore \
+-srckeystore server/kafka-master-2.airlegit.com/kafka-master-2.p12 \
+-srcstoretype PKCS12 \
+-destkeystore server/kafka-master-2.airlegit.com/kafka-master-2.jks \
+-deststoretype JKS
+-----------------------
+openssl pkcs12 -export \
+-inkey server/kafka-master-3.airlegit.com/server.key \
+-in server/kafka-master-3.airlegit.com/server.cer \
+-certfile issuingca/cert/issuingca.cer \
+-out  server/kafka-master-3.airlegit.com/kafka-master-3.p12 \
+-name kafka-master-3
+
+keytool -importkeystore \
+-srckeystore server/kafka-master-3.airlegit.com/kafka-master-3.p12 \
+-srcstoretype PKCS12 \
+-destkeystore server/kafka-master-3.airlegit.com/kafka-master-3.jks \
+-deststoretype JKS
+----------------------
+openssl pkcs12 -export \
+-inkey server/kafka-broker-1.airlegit.com/server.key \
+-in server/kafka-broker-1.airlegit.com/server.cer \
+-certfile issuingca/cert/issuingca.cer \
+-out server/kafka-broker-1.airlegit.com/kafka-broker-1.p12 \
+-name kafka-broker-1
+
+keytool -importkeystore \
+-srckeystore server/kafka-broker-1.airlegit.com/kafka-broker-1.p12 \
+-srcstoretype PKCS12 \
+-destkeystore server/kafka-broker-1.airlegit.com/kafka-broker-1.jks \
+-deststoretype JKS
+------------------------
+openssl pkcs12 -export \
+-inkey server/kafka-broker-2.airlegit.com/server.key \
+-in server/kafka-broker-2.airlegit.com/server.cer \
+-certfile issuingca/cert/issuingca.cer \
+-out server/kafka-broker-2.airlegit.com/kafka-broker-2.p12 \
+-name kafka-broker-2
+
+keytool -importkeystore \
+-srckeystore server/kafka-broker-2.airlegit.com/kafka-broker-2.p12 \
+-srcstoretype PKCS12 \
+-destkeystore server/kafka-broker-2.airlegit.com/kafka-broker-2.jks \
+-deststoretype JKS
+---------------------------
+openssl pkcs12 -export \
+-inkey server/kafka-master-1.airlegit.com/server.key \
+-in server/kafka-master-1.airlegit.com/server.cer \
+-certfile issuingca/cert/issuingca.cer \
+-out kafka-master-1.p12 \
+-name kafka-master-1
+--------------------------------------------
+keytool -importkeystore \
+-srckeystore kafka-master-1.p12 \
+-srcstoretype PKCS12 \
+-destkeystore kafka-master-1.jks \
+-deststoretype JKS
+-------------------------------------------------------------------------------------------------------------------------------------
+keytool -importcert \
+-alias rootca \
+-file ~/TLS/rootca/cert/rootca.cer \
+-keystore kafka.truststore.jks
+-------------------------------
+keytool -importcert \
+-alias issuingca \
+-file ~/TLS/issuingca/cert/issuingca.cer \
+-keystore kafka.truststore.jks
